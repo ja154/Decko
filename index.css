@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-decko-pink: #FF007F;
+  --color-decko-teal: #00E5FF;
+  --color-decko-bg: #121212;
+  --color-decko-surface: #1E1E1E;
+  --color-decko-surface-hover: #2C2C2C;
+}
+
+body {
+    background-color: var(--color-decko-bg);
+    color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-decko-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Utilities */
+.text-decko-pink { color: var(--color-decko-pink); }
+.text-decko-teal { color: var(--color-decko-teal); }
+.bg-decko-pink { background-color: var(--color-decko-pink); }
+.bg-decko-teal { background-color: var(--color-decko-teal); }
+.bg-surface { background-color: var(--color-decko-surface); }
+
+.decko-gradient-text {
+    background: linear-gradient(135deg, var(--color-decko-teal) 0%, var(--color-decko-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.decko-border-glow:focus-within {
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+    border-color: var(--color-decko-teal);
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
